@@ -8,6 +8,30 @@ export default function Home() {
   const [busca, setBusca] = useState("");
   const [paginaAtual, setPaginaAtual] = useState(1);
   const itensPorPagina = 20;
+  //filtro por genero
+  const [generoEscolhido, setGeneroEscolhido] = useState("Todos");
+  const listaGeneros = [
+    "Todos",
+    "Action",
+    "Horror",
+    "Drama",
+    "Comedy",
+    "Romance",
+    "Fantasy",
+    "Anime",
+    "Adventure",
+    "Science-Fiction",
+    "Thriller",
+    "Crime",
+    "Mystery",
+    "Family",
+    "Supernatural",
+    "History",
+    "Medical",
+    "Legal",
+    "Western",
+    "Music"
+  ];
 
   useEffect(() => {
     //consumindo api
@@ -34,9 +58,12 @@ export default function Home() {
     setPaginaAtual(1);
   }
   //filtragem
-  const producaoFiltrada = producao.filter((item) =>
-    item.name.toLowerCase().includes(busca.toLowerCase()),
-  );
+  const producaoFiltrada = producao.filter((item) => {
+    const passouNaBusca = item.name.toLowerCase().includes(busca.toLowerCase());
+    const passouNoGenero =
+      generoEscolhido === "Todos" || item.genres?.includes(generoEscolhido);
+    return passouNaBusca && passouNoGenero;
+  });
 
   //constantes p rederização das páginas
   const ultimoItem = paginaAtual * itensPorPagina;
@@ -53,6 +80,22 @@ export default function Home() {
         onChange={handleSearchChange}
         className="input-busca"
       />
+      <div className="filtros-genero">
+        <select
+          className="select-genero"
+          value={generoEscolhido}
+          onChange={(evento) => {
+            setGeneroEscolhido(evento.target.value);
+            setPaginaAtual(1);
+          }}
+        >
+          {listaGeneros.map((genero) => (
+            <option key={genero} value={genero}>
+              {genero === "Todos" ? "Todos os Filmes" : genero}
+            </option>
+          ))}
+        </select>
+      </div>
       <div className="principal">
         <div className="catalogo">
           <p className="linha-vertical">.</p>
