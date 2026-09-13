@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
-import CardItem from "./CardItem";
+import CardItem from "../components/CardItem";
 import "./Home.css";
+import SearchBar from "../components/SearchBar";
+import Loading from "../components/Loading";
 
 export default function Home() {
   const [producao, setProducao] = useState([]);
@@ -74,13 +76,7 @@ export default function Home() {
   return (
     <div className="container-home">
       <div className="input-select">
-        <input
-          type="text"
-          placeholder="🔍︎  Buscar filme ou série..."
-          value={busca}
-          onChange={handleSearchChange}
-          className="input-busca"
-        />
+        <SearchBar busca={busca} aoMudarBusca={handleSearchChange} />
         <div className="filtros-genero">
           <select
             className="selecionar-genero"
@@ -105,7 +101,7 @@ export default function Home() {
         </div>
         <div className="grid-cards">
           {carregando ? (
-            <p className="buscando-filmes">Carregando...</p>
+            <Loading />
           ) : itensAtuais.length > 0 ? (
             itensAtuais.map((item) => (
               <CardItem key={item.id} dadosDoFilme={item} />
