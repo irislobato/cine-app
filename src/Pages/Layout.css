@@ -77,3 +77,8 @@ svg{
 .footer-copy-linha{
     width: 1000px;
 }
+@media (max-width: 768px)  {
+  nav{
+    gap: 0;
+  }
+}

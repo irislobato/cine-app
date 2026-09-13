@@ -4,7 +4,6 @@ import Layout from "./Pages/Layout";
 import Home from "./Pages/Home";
 import Detalhes from "./Pages/Detalhes";
 import Sobre from "./Pages/Sobre";
-import Favoritos from "./Pages/Favoritos"
 
 export default function App() {
   return (
@@ -13,8 +12,7 @@ export default function App() {
           <Route index element={<Home />}></Route>
           <Route path="item/:id" element={<Detalhes />}></Route>
           <Route path="sobre" element={<Sobre/>}></Route>
-          <Route path="favoritos" element={<Favoritos/>}></Route>
-        </Route>
+          </Route>
       </Routes>
   );
 }

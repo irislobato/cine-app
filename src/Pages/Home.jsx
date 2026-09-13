@@ -30,7 +30,7 @@ export default function Home() {
     "Medical",
     "Legal",
     "Western",
-    "Music"
+    "Music",
   ];
 
   useEffect(() => {
@@ -73,28 +73,30 @@ export default function Home() {
 
   return (
     <div className="container-home">
-      <input
-        type="text"
-        placeholder="🔍︎  Buscar filme ou série..."
-        value={busca}
-        onChange={handleSearchChange}
-        className="input-busca"
-      />
-      <div className="filtros-genero">
-        <select
-          className="select-genero"
-          value={generoEscolhido}
-          onChange={(evento) => {
-            setGeneroEscolhido(evento.target.value);
-            setPaginaAtual(1);
-          }}
-        >
-          {listaGeneros.map((genero) => (
-            <option key={genero} value={genero}>
-              {genero === "Todos" ? "Todos os Filmes" : genero}
-            </option>
-          ))}
-        </select>
+      <div className="input-select">
+        <input
+          type="text"
+          placeholder="🔍︎  Buscar filme ou série..."
+          value={busca}
+          onChange={handleSearchChange}
+          className="input-busca"
+        />
+        <div className="filtros-genero">
+          <select
+            className="selecionar-genero"
+            value={generoEscolhido}
+            onChange={(evento) => {
+              setGeneroEscolhido(evento.target.value);
+              setPaginaAtual(1);
+            }}
+          >
+            {listaGeneros.map((genero) => (
+              <option className="opcao" key={genero} value={genero}>
+                {genero === "Todos" ? "Todos os Filmes" : genero}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
       <div className="principal">
         <div className="catalogo">

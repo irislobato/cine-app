@@ -112,3 +112,16 @@
   font-family: "Space Mono";
   font-size: 14px;
 }
+@media (max-width: 768px){
+  .container-detalhes{
+    flex-direction: column;
+  }
+  .info-sub{
+    flex-direction: column;
+    gap: 10px;
+  }
+  .info-origem{
+    flex-direction: column;
+    gap: 20px;
+  }
+}

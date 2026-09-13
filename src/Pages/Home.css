@@ -70,3 +70,29 @@
   text-decoration-color: black;
   cursor: pointer;
 }
+.input-select{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.selecionar-genero{
+  background-color: #ffc947;
+  border: none;
+  width: 150px;
+  padding: 5px;
+  font-family: "DM Sans";
+  font-weight: 600;
+  border-radius: 5px;
+}
+.selecionar-genero:hover{
+  cursor: pointer;
+}
+
+@media (max-width: 768px)  {
+  .selecionar-genero{
+    max-width: 100px;
+  }
+  .grid-cards{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
