@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Text:ital@0;1&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  justify-items: center;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+.container-home {
+  background-color: #1a1a2e;
+  padding: 20px;
+}
+.linha-vertical {
+  background-color: #e94560;
+  color: #e94560;
+  width: 5px;
+  height: 40px;
+  border-radius: 2px;
+}
+.catalogo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 15px;
+}
+.titulo-catalogo {
+  color: #eaeaea;
+  font-family: "Playfair Display";
+  font-size: 40px;
+}
+.input-busca {
+  background-color: #16213e;
+  width: 400px;
+  height: 40px;
+  font-size: 15px;
+  padding: 15px;
+  border: solid 1px #0f3460;
+  border-radius: 5px;
+  font-family: "DM Sans";
+  color: #eaeaea;
+}
+.paginas-div {
+  display: flex;
+  justify-content: center;
+}
+.botao-paginacao {
+  padding: 5px;
+  margin-inline: 5px;
+  background-color: #ffc947;
+  font-weight: 700;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 15px;
+  border-radius: 5px;
+  border: none;
+  width: 25px;
+}
+.botao-paginacao:hover{
+    transform: scale(1.15);
+    transition: 0.2s ease-in-out;
+    text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: black;
+  cursor: pointer;
+}

@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Text:ital@0;1&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.card-filme {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #16213e;
+  background-color: #1E1E30;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.titulo-rating {
+  display: flex;
+  justify-content: space-between;
+}
+.estrela {
+  width: 15px;
+  height: 15px;
+}
+.rating {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.poster {
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  color: #eaeaea;
+}
+.rating-numero {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 13px;
+  color: #fbca41;
+}
+.titulo-producao {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  font-weight: 900;
+}
+.genero {
+  margin-top: 5px;
+  color: #a0a0a0;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.ver-detalhes {
+  text-decoration: none;
+  margin-bottom: 5px;
+  color: black;
+  background-color: #ffc947;
+  width: 130px;
+  text-align: center;
+  padding: 3px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+}
+.ver-detalhes:hover {
+  transform: scale(1.1);
+  transition: 0.5s ease-in-out;
+  background-color: #e94560;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: black;
+}

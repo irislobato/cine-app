@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Text:ital@0;1&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container-detalhes {
+  display: flex;
+  padding: 15px;
+  gap: 20px;
+}
+.poster-original {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  align-self: flex-start;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.voltar {
+  display: inline-block;
+  background-color: #ffc947;
+  border-radius: 5px;
+  font-family: "DM Sans";
+  font-weight: 700;
+  font-size: 25px;
+  text-decoration: none;
+  color: black;
+  padding-bottom: 3px;
+  padding-inline: 10px;
+  border-radius: 30%;
+}
+.voltar:hover {
+  transform: scale(1.1);
+  transition: 0.5s ease-in-out;
+  background-color: #e94560;
+}
+.detalhes-div {
+  padding: 20px;
+  background-color: #1a1a2e;
+}
+.estrela-detalhes {
+  width: 15px;
+  height: 15px;
+}
+.info-sub {
+  display: flex;
+  gap: 100px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+.rating-detalhes {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.genero-detalhes {
+  background-color: #16213e;
+  width: 300px;
+  padding: 5px;
+  text-align: center;
+  color: #e94560;
+  border-radius: 5px;
+  font-family: "Space Mono";
+  font-size: 13px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.info-detalhes {
+  padding: 20px;
+}
+.release-runtime {
+  font-family: "Space Mono";
+  font-size: 15px;
+  color: #a0a0a0;
+}
+.rating-numero-detalhes {
+  color: #ffc947;
+  font-family: "Space Mono";
+  font-size: 15px;
+}
+.titulo-detalhes{
+  font-family: "Playfair Display";
+  font-size: 56px;
+  color: #EAEAEA;
+  margin-bottom: 20px;
+}
+.sinopse{
+  font-family: "DM Sans";
+  font-size: 16px;
+  margin-bottom: 50px;
+  color: #a0a0a0;
+}
+.info-origem{
+  display: flex;
+  gap: 60px;
+}
+.info-haha-to-maluca{
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.titulo-origem{
+  color: #e94560;
+  font-family: "Space Mono";
+  font-size: 11px;
+}
+.origem{
+  color: #a0a0a0;
+  font-family: "Space Mono";
+  font-size: 14px;
+}
