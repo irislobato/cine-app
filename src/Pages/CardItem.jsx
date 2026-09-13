@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./CardItem.css";
+import Tooltip from "../Tooltip";
 
 export default function CardItem({ dadosDoFilme }) {
   return (
@@ -10,7 +11,7 @@ export default function CardItem({ dadosDoFilme }) {
         <div className="titulo-rating">
           <h3 className="titulo-producao">{dadosDoFilme.name}</h3>
           <div className="rating">
-            <img className="estrela" src="../public/estrela.png" alt="" />
+            <img className="estrela" src="/estrela.png" alt="" />
             <p className="rating-numero">{dadosDoFilme.rating?.average}</p>
           </div>
         </div>
@@ -19,9 +20,11 @@ export default function CardItem({ dadosDoFilme }) {
 
         {/*link que leva pra ver os detalhes
         ta faltando o tooltip ainda */}
-        <Link to={`/item/${dadosDoFilme.id}`} className="ver-detalhes">
-          Ver Detalhes
-        </Link>
+        <Tooltip texto="Clique para saber mais detalhes">
+          <Link to={`/item/${dadosDoFilme.id}`} className="ver-detalhes">
+            Ver Detalhes
+          </Link>
+        </Tooltip>
       </div>
     </div>
   );

@@ -1,0 +1,19 @@
+.tooltip{
+    position: relative;
+    display: inline-block;
+}
+.tooltip-box{
+    position: absolute;
+    transform: translateX(-50%);
+    background-color: #e94560;
+    color: black;
+    font-family: "DM Sans";
+    font-size: 14px;
+    width: 240px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 7px;
+    margin: 9px;
+    top: 140%;
+    left: 40%;
+}
