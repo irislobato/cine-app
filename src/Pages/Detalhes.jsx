@@ -52,7 +52,7 @@ export default function Detalhes() {
             <div className="rating-detalhes">
               <img
                 className="estrela-detalhes"
-                src="../public/estrela.png"
+                src="/estrela.png"
                 alt=""
               />
               <p className="rating-numero-detalhes">
